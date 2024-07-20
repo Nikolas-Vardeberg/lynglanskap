@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import localFont from 'next/font/local'
+
+const myFont = localFont({ src: "../public/font/DovreSocial-Light.woff2"})
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,8 +19,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <main className='bg-[#EBF2FA]'>
+      <body className={myFont.className}>
+        <main>
         {children}
         </main>
       </body>
